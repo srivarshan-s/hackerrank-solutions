@@ -11,13 +11,25 @@ public class Main {
                 System.out.println(num + " can be fitted in:");
                 if (num >= -128 && num <= 127) {
                     System.out.println("* byte");
+                } else if (num >= -32768 && num <= 32767) {
+                    System.out.println("* short");
+                } else if (num >= pow(-2, 31) && num <= pow(2, 31)-1) {
+                    System.out.println("* int");
+                } else if (num >= pow(-2, 63) && num <= pow(2, 63)-1) {
+                    System.out.println("* int");
                 }
             } catch (Exception e) {
-                //TODO: handle exception
+                System.out.println(scan.next() + " can't be fitted anywhere.");
             }
         }
 
         scan.close();
+    }
+
+    public static long pow(long num, long val) {
+        if (val == 0) return 1;
+        if (val == 1) return num;
+        return pow(num, val-1);
     }
 }
 
