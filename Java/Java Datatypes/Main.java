@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,12 +12,12 @@ public class Main {
                 System.out.println(num + " can be fitted in:");
                 if (num >= -128 && num <= 127) {
                     System.out.println("* byte");
-                } else if (num >= -32768 && num <= 32767) {
+                } if (num >= -32768 && num <= 32767) {
                     System.out.println("* short");
-                } else if (num >= pow(-2, 31) && num <= pow(2, 31)-1) {
+                } if (num >= Math.pow(-2, 31) && num <= Math.pow(2, 31)-1) {
                     System.out.println("* int");
-                } else if (num >= pow(-2, 63) && num <= pow(2, 63)-1) {
-                    System.out.println("* int");
+                } if (num >= Math.pow(-2, 63) && num <= Math.pow(2, 63)-1) {
+                    System.out.println("* long");
                 }
             } catch (Exception e) {
                 System.out.println(scan.next() + " can't be fitted anywhere.");
@@ -25,36 +26,4 @@ public class Main {
 
         scan.close();
     }
-
-    public static long pow(long num, long val) {
-        if (val == 0) return 1;
-        if (val == 1) return num;
-        return pow(num, val-1);
-    }
 }
-
-
-/* import java.util.*;
-import java.io.*;
-
-class Main {
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-
-        for (int i = 0; i < t; i++) {
-
-            try {
-                long x = sc.nextLong();
-                System.out.println(x + " can be fitted in:");
-                if (x >= -128 && x <= 127)
-                    System.out.println("* byte");
-                // Complete the code
-            } catch (Exception e) {
-                System.out.println(sc.next() + " can't be fitted anywhere.");
-            }
-
-        }
-    }
-} */
