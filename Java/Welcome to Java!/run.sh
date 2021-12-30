@@ -1,1 +1,1 @@
-javac Main.java && java Main && rm *class
+javac Solution.java && java Solution && rm *class
