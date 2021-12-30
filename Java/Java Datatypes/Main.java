@@ -3,6 +3,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        
+        int q = scan.nextInt();
+        for (int i = 0; i < q; i++) {
+            try {
+                long num = scan.nextLong();
+                System.out.println(num + " can be fitted in:");
+                if (num >= -128 && num <= 127) {
+                    System.out.println("* byte");
+                }
+            } catch (Exception e) {
+                //TODO: handle exception
+            }
+        }
+
         scan.close();
     }
 }
