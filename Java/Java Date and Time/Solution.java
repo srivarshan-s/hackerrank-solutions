@@ -13,13 +13,21 @@ class Result {
      *
      * The function is expected to return a STRING.
      * The function accepts following parameters:
-     *  1. INTEGER month
-     *  2. INTEGER day
-     *  3. INTEGER year
+     * 1. INTEGER month
+     * 2. INTEGER day
+     * 3. INTEGER year
      */
 
     public static String findDay(int month, int day, int year) {
-
+        try {
+            String inputDate = Integer.toString(day) + "/" + Integer.toString(month) + "/" + Integer.toString(year);
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            Date myDate = sdf.parse(inputDate);
+            DateFormat dayFormat = new SimpleDateFormat("EEEE");
+            return dayFormat.format(myDate).toUpperCase();
+        } catch (Exception e) {
+            return "Monday".toUpperCase();
+        }
     }
 
 }
