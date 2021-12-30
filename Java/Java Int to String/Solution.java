@@ -1,7 +1,7 @@
 import java.util.*;
 import java.security.*;
 
-public class Main {
+public class Solution {
     public static void main(String[] args) {
 
         DoNotTerminate.forbidExit();
