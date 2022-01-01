@@ -9,6 +9,10 @@ public class Solution {
         scanner.close();
         
         // Write your code here.
+        String us = "$";
+        String india = "$";
+        String china = "$";
+        String france = "$";
         
         System.out.println("US: " + us);
         System.out.println("India: " + india);
