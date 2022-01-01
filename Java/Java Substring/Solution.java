@@ -1,15 +1,17 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String S = in.next();
-        int start = in.nextInt();
-        int end = in.nextInt();
+        Scanner scanner = new Scanner(System.in);
+
+        String string = scanner.next();
+        int startIdx = scanner.nextInt();
+        int endIdx = scanner.nextInt();
+
+        String subString = string.substring(startIdx, endIdx);
+        System.out.println(subString);
+        
+        scanner.close();
     }
 }
