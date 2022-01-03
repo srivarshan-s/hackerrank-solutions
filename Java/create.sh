@@ -4,4 +4,4 @@ mkdir "$dir_name"
 cp run.sh "$dir_name"/
 cd "$dir_name"
 touch Solution.java
-code .
+vim Solution.java
