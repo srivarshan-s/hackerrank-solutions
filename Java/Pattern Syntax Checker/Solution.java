@@ -8,10 +8,7 @@ public class Solution
 		int testCases = Integer.parseInt(in.nextLine());
 		while(testCases>0){
 			String pattern = in.nextLine();
-          	//Write your code
+			//Write your code
 		}
 	}
 }
-
-
-
