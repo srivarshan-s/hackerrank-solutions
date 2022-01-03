@@ -33,3 +33,22 @@ public class DuplicateWords {
     }
 }
 */
+
+import java.util.Scanner;
+
+public class Solution {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int num = scanner.nextInt();
+		while (num > 0) {
+			String string = scanner.nextLine();
+			String[] stringArray = string.split(" ");
+			for (String ele: stringArray) {
+				System.out.print(ele + " ");
+			}
+			System.out.println();
+			num--;
+		}
+		scanner.close();
+	}
+}
