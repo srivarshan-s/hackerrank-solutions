@@ -1,16 +1,16 @@
-// TODO: Complete solution
+// TODO: Complete Solution
 
-/*
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DuplicateWords {
+public class Solution {
 
     public static void main(String[] args) {
 
-        // String regex = " Write a RegEx matching repeated words here. ";
-        // Pattern p = Pattern.compile(regex,  Insert the correct Pattern flag here.);
+        String regex = "/* Write a RegEx matching repeated words here. */";
+        // Pattern p = Pattern.compile(regex, /* Insert the correct Pattern flag here.*/);
+        Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 
         Scanner in = new Scanner(System.in);
         int numSentences = Integer.parseInt(in.nextLine());
@@ -22,7 +22,8 @@ public class DuplicateWords {
             
             // Check for subsequences of input that match the compiled pattern
             while (m.find()) {
-                // input = input.replaceAll( The regex to replace ,  The replacement. );
+                // input = input.replaceAll(/* The regex to replace */, /* The replacement. */);
+                input = input.replaceAll(regex, "");
             }
             
             // Prints the modified sentence.
@@ -31,30 +32,4 @@ public class DuplicateWords {
         
         in.close();
     }
-}
-*/
-
-import java.util.Scanner;
-
-public class Solution {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		int num = Integer.parseInt(scanner.nextLine());
-		while (num > 0) {
-			String string = scanner.nextLine();
-			String[] stringArray = string.split(" ");
-			for (int i = 0; i < stringArray.length; ++i) {
-				if (i == stringArray.length - 1) {
-					System.out.print(stringArray[i] + " ");
-				}
-				if (stringArray[i].toLowerCase().compareTo(stringArray[i+1].toLowerCase()) == 0) {
-					i++;
-				}
-				System.out.print(stringArray[i] + " ");
-			}
-			System.out.println();
-			num--;
-		}
-		scanner.close();
-	}
 }
