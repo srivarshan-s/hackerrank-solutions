@@ -39,12 +39,18 @@ import java.util.Scanner;
 public class Solution {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int num = scanner.nextInt();
+		int num = Integer.parseInt(scanner.nextLine());
 		while (num > 0) {
 			String string = scanner.nextLine();
 			String[] stringArray = string.split(" ");
-			for (String ele: stringArray) {
-				System.out.print(ele + " ");
+			for (int i = 0; i < stringArray.length; ++i) {
+				if (i == stringArray.length - 1) {
+					System.out.print(stringArray[i] + " ");
+				}
+				if (stringArray[i].toLowerCase().compareTo(stringArray[i+1].toLowerCase()) == 0) {
+					i++;
+				}
+				System.out.print(stringArray[i] + " ");
 			}
 			System.out.println();
 			num--;
