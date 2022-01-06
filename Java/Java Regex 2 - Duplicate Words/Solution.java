@@ -20,7 +20,7 @@ public class Solution {
             // Check for subsequences of input that match the compiled pattern
             while (m.find()) {
                 // input = input.replaceAll(/* The regex to replace */, /* The replacement. */);
-                input = input.replaceAll(regex, "");
+                input = input.replaceAll(m.group(), m.group(1));
             }
             
             // Prints the modified sentence.
