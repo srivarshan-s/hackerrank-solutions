@@ -7,7 +7,7 @@ public class Solution {
     public static void main(String[] args) {
 
         String regex = "/* Write a RegEx matching repeated words here. */";
-        Pattern p = Pattern.compile(regex, /* Insert the correct Pattern flag here.*/);
+        Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 
         Scanner in = new Scanner(System.in);
         int numSentences = Integer.parseInt(in.nextLine());
