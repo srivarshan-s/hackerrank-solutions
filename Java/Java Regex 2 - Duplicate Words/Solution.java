@@ -1,5 +1,3 @@
-// TODO: Complete Solution
-
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -9,8 +7,7 @@ public class Solution {
     public static void main(String[] args) {
 
         String regex = "/* Write a RegEx matching repeated words here. */";
-        // Pattern p = Pattern.compile(regex, /* Insert the correct Pattern flag here.*/);
-        Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+        Pattern p = Pattern.compile(regex, /* Insert the correct Pattern flag here.*/);
 
         Scanner in = new Scanner(System.in);
         int numSentences = Integer.parseInt(in.nextLine());
@@ -22,8 +19,7 @@ public class Solution {
             
             // Check for subsequences of input that match the compiled pattern
             while (m.find()) {
-                // input = input.replaceAll(/* The regex to replace */, /* The replacement. */);
-                input = input.replaceAll(regex, "");
+                input = input.replaceAll(/* The regex to replace */, /* The replacement. */);
             }
             
             // Prints the modified sentence.
