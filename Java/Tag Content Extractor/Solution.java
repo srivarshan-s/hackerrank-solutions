@@ -1,20 +1,25 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
 	public static void main(String[] args){
 		
-		Scanner in = new Scanner(System.in);
-		int testCases = Integer.parseInt(in.nextLine());
+		Scanner scanner = new Scanner(System.in);
+		int testCases = Integer.parseInt(scanner.nextLine());
 		while(testCases>0){
-			String line = in.nextLine();
+			String line = scanner.nextLine();
 			
-          	//Write your code here
-			
-			testCases--;
-		}
-	}
+            Pattern pattern = Pattern.compile("<(.+)>(([^<>]+))</\\1>");
+            Matcher matcher = pattern.matcher(line);
+            if (matcher.find()) {
+                String result = matcher.group(2);
+                System.out.println(result);
+            } else {
+                System.out.println("None");
+            }
+
+            testCases--;
+        }
+        scanner.close();
+    }
 }
